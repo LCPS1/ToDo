@@ -1,0 +1,17 @@
+<div class="title">
+    <h1>View Task</h1>
+</div>
+<app-spinner *ngIf="loading"></app-spinner>
+<div *ngIf="task != null" class="container">
+    <mat-card class="card">
+        <mat-card-title>{{ task.title}}</mat-card-title>
+        <mat-card-content>
+            <p><strong>Description:</strong> {{ task.description}} </p>
+            <p><strong>DueDate:</strong> {{ task.dueDate }} </p>
+            <p><strong>IsCompleted:</strong> {{ task.isCompleted }} </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button routerLink="/listtasks" mat-raised-button>Go Back</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

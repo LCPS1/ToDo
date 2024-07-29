@@ -1,0 +1,18 @@
+-- Create the database
+CREATE DATABASE ToDoApp;
+GO
+
+-- Use the ToDoApp database
+USE ToDoApp;
+GO
+
+-- Create the Tasks table
+CREATE TABLE Tasks (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    Title NVARCHAR(255) NOT NULL,
+    Description NVARCHAR(MAX) NULL,
+    DueDate DATETIME NOT NULL,
+    IsCompleted BIT NOT NULL,
+    CreationDate DATETIME DEFAULT GETDATE()
+);
+GO
